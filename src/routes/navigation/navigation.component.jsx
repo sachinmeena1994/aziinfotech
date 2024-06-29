@@ -15,26 +15,38 @@ const Navigation = () => {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <Fragment>
-      <div className="mx-auto text-white bg-[#3069B3] px-4 py-5 2xl:px-14 xl:py-6 flex justify-between items-center relative">
+    <>
+      <div className="mx-auto text-white bg-[#3069B3] px-4 py-6 2xl:px-14  flex justify-between items-center relative">
         {/* Burger Menu */}
 
         {/* Logo */}
         <div>
           <Link to="/">
-            <CrwnLogo className="h-10 object-cover" alt="Satva Homes" />
+            {/* <CrwnLogo className="h-10 object-cover" alt="Satva Homes" /> */}
+            <img
+              className="h-12 object-cover"
+              src="./tally_logo_white.svg"
+              alt=""
+            />
           </Link>
         </div>
 
         {/* Links */}
-        <div className="w-[20%] hidden lg:flex justify-between items-center text-zinc-800 mx-10 p-3 text-md outline-none border-none rounded-md bg-white">
-          <input className="w-[85%] outline-none border-none" type="text" placeholder="Search anything..." />
+        <div className="w-[30%] hidden lg:flex justify-between items-center text-zinc-800 mx-10 p-3 text-md outline-none border-none rounded-md bg-white">
+          <input
+            className="w-[85%] outline-none border-none"
+            type="text"
+            placeholder="Search anything..."
+          />
           <IoSearchOutline className="text-zinc-500 w-[15%] text-xl" />
         </div>
 
         {/* {Buttons} */}
         <div className=" flex items-center gap-8">
           <div className="hidden md:flex md:items-center text-white text-[18x] gap-10 font-medium">
+            <Link to="/contact" className={` text-white text-lg  duration-200`}>
+              Contact
+            </Link>
             <Link to="/faq" className={` text-white text-lg duration-200`}>
               Faq
             </Link>
@@ -79,8 +91,7 @@ const Navigation = () => {
         </div>
         <AnimatePresence mode="wait">{isActive && <SideNav />}</AnimatePresence>
       </div>
-      <Outlet />
-    </Fragment>
+    </>
   );
 };
 
