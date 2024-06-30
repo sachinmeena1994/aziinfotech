@@ -1,0 +1,168 @@
+.product-page-container {
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping for smaller screens */
+  justify-content: center;
+  height: max-content;
+  background-color: rgb(244, 244, 244);
+  padding: 50px 20px;
+}
+
+.image-container {
+  width: 45%;
+  margin: 20px;
+  position: sticky;
+  top: 10px;
+  height: 50%;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+border-radius: 5px;
+}
+
+.image-container .image-section {
+  width: 100%;
+  object-fit: cover;
+border-radius: 5px;
+
+}
+
+.description-container {
+  width: 45%;
+  margin: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  height: max-content;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.bullet-points-container {
+  list-style-type: disc;
+  margin: 10px;
+}
+
+.sentences-container {
+  margin: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .image-container,
+  .description-container {
+    width: 100%; /* Full width for medium screens */
+    margin: 10px 0;
+  }
+
+  .image-container {
+    position: static; /* Remove sticky positioning */
+    height: auto; /* Adjust height to auto */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-page-container {
+    padding: 20px 10px; /* Reduce padding for small screens */
+  }
+
+  .image-container,
+  .description-container {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-page-container {
+    padding: 10px 5px; /* Further reduce padding for very small screens */
+  }
+
+  .image-container,
+  .description-container {
+    margin: 5px 0;
+  }
+
+  .bullet-points-container,
+  .sentences-container {
+    margin: 5px;
+  }
+}
+
+.quantity-container {
+  display: inline-flex;
+  align-items: center;
+  // border: 1px solid #d3d3d3;
+  border-radius: 4px;
+   /* Add margin for spacing */
+  padding-left: 40px;
+    margin: 20px 0 10px 0;
+}
+
+.quantity-button {
+  background-color: #ffffff;
+  padding: 10px 7px;
+  cursor: pointer;
+  font-size: 16px;
+  border: 1px solid #d3d3d3;
+}
+
+.quantity-input {
+  width: 30px;
+  text-align: center;
+  border-top: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.buy-now-button {
+  background-color: #337ab7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .quantity-container {
+    display: block; /* Stack elements vertically */
+    text-align: center;
+  }
+
+  .buy-now-button {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px; /* Add margin for spacing */
+  }
+
+  .quantity-button {
+    padding: 5px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .quantity-input {
+    width: 40px; /* Adjust width for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .quantity-button {
+    padding: 3px; /* Further adjust padding for very small screens */
+    font-size: 12px; /* Further adjust font size for very small screens */
+  }
+
+  .quantity-input {
+    width: 30px; /* Further adjust width for very small screens */
+    font-size: 12px; /* Further adjust font size for very small screens */
+  }
+
+  .buy-now-button {
+    padding: 8px 16px; /* Adjust padding for very small screens */
+    font-size: 14px; /* Adjust font size for very small screens */
+  }
+}
+

@@ -9,7 +9,7 @@ import Shop from "./routes/Shop/Shop";
 import Faq from "./routes/Faq/Faq";
 import Cart from "./routes/Cart/Cart";
 import LocomotiveScroll from "locomotive-scroll";
-
+import ProductDisplay from './routes/product-display/product-display.component';
 const App = () => {
   const location = useLocation();
 
@@ -23,6 +23,7 @@ const App = () => {
         <Route path="faq" element={<Faq />} />
         <Route path="cart" element={<Cart />} />
         <Route path="sign-in" element={<SignIn />} />
+        <Route path='product-display' element={<ProductDisplay />} />
       </Routes>
     </AnimatePresence>
   );
